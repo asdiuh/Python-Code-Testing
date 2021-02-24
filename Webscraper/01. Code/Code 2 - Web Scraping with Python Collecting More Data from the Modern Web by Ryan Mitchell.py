@@ -69,3 +69,15 @@ bs = BeautifulSoup(html, 'html.parser')
 print(bs.find('img',{'src':'../img/gifts/img1.jpg'}).parent.previous_sibling.get_text())
 
 # 45
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+html = urlopen('http://www.pythonscraping.com/pages/page3.html')
+bs = BeautifulSoup(html, 'html.parser')
+images = bs.find_all('img',{'src':re.compile('\.\.\/img\/gifts/img.*\.jpg')})
+for image in images:
+    print(image['src'])
+
+
+# chapter 3 writing web crawlers
