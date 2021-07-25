@@ -7,7 +7,7 @@ setwd('C:/Users/redhw/OneDrive/Documents/GitHub/Python-Code-Testing/Credit Risk 
 data = readxl::read_excel('candy-data.xlsx')
 
 # model = LinearRegression().fit(candy['chocolate'].values.reshape(-1,1), candy['winpercent'])
-model = lm(winpercent ~ chocolate -1,data = data)
+model = lm(winpercent ~ chocolate + fruity -1,data = data)
 
 summary(model)
 
