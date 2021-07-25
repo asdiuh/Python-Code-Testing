@@ -23,4 +23,6 @@ candy.columns.values
 
 model = LinearRegression().fit(candy['winpercent'].values.reshape(-1,1), candy['chocolate'])
 
-OLS(candy['winpercent'],candy['chocolate']).fit().summary()
+OLS(candy['winpercent'],candy[['chocolate','fruity']]).fit().summary()
+
+# up to page 56 now
