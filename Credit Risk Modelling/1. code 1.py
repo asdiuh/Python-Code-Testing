@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+-*- coding: utf-8 -*-
 """
 Created on Sat Jul  3 13:31:55 2021
 
@@ -44,4 +44,4 @@ df['WOE'] = np.log(df.good_distri / df.bad_distri)
 df['WOE%'] = df.WOE * 100
 
 
-# on page 62
+# on page 93
