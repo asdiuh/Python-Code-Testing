@@ -44,4 +44,4 @@ df['WOE'] = np.log(df.good_distri / df.bad_distri)
 df['WOE%'] = df.WOE * 100
 
 
-# on page 93
+# on page 100
